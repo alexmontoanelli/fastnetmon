@@ -2604,7 +2604,7 @@ void init_logging() {
     log4cpp::Appender* appender = new log4cpp::FileAppender("default", log_file_path);
     appender->setLayout(layout);
 
-    logger.setPriority(log4cpp::Priority::INFO);
+    logger.setPriority(log4cpp::Priority::DEBUG);
     logger.addAppender(appender);
 
     logger << log4cpp::Priority::INFO << "Logger initialized!";
