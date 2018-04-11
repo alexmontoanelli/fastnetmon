@@ -1479,9 +1479,9 @@ sub install_fastnetmon {
     } else {
         # Pull new code
         if ($we_use_code_from_master) {
-            exec_command("git clone $fastnetmon_git_path --quiet 2>/dev/null");
+            exec_command("git clone $fastnetmon_git_path");
         } else {
-            exec_command("git clone $fastnetmon_git_path --quiet 2>/dev/null");
+            exec_command("git clone $fastnetmon_git_path");
         }
 
         if ($? != 0) {
