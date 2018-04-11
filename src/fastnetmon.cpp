@@ -3095,7 +3095,7 @@ bool exabgp_flow_spec_ban_manage(std::string action, std::string flow_spec_rule_
 
     close(exabgp_pipe);
     
-    logger << log4cpp::Priority::INFO << "Enviando comando ao EXABGP " << bgp_message
+    logger << log4cpp::Priority::INFO << "Enviando comando ao EXABGP " << bgp_message;
     
     return true;
 }
