@@ -2607,7 +2607,7 @@ void init_logging() {
     logger.setPriority(log4cpp::Priority::DEBUG);
     logger.addAppender(appender);
 
-    logger << log4cpp::Priority::INFO << "Logger initialized!";
+    logger << log4cpp::Priority::INFO << "Logger initialized! - By Unetvale";
 }
 
 void reconfigure_logging() {
