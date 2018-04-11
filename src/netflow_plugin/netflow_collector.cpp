@@ -879,14 +879,12 @@ void process_netflow_packet_v9(u_int8_t* packet, u_int len, std::string client_a
             }
             break;
         case NF9_OPTIONS_FLOWSET_ID:
-            logger << log4cpp::Priority::INFO
-                   << "I received netflow v9 options flowset id but I haven't support for it";
+            //logger << log4cpp::Priority::INFO << "I received netflow v9 options flowset id but I haven't support for it";
             /* Not implemented yet */
             break;
         default:
             if (flowset_id < NF9_MIN_RECORD_FLOWSET_ID) {
-                logger << log4cpp::Priority::ERROR
-                       << "Received unknown netflow v9 reserved flowset type " << flowset_id;
+                logger << log4cpp::Priority::ERROR << "Received unknown netflow v9 reserved flowset type " << flowset_id;
                 break;
             }
 

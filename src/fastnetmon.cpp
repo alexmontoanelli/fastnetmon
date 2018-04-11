@@ -292,7 +292,7 @@ patricia_tree_t* lookup_tree_ipv4, *whitelist_tree_ipv4;
 // IPv6 lookup trees
 patricia_tree_t* lookup_tree_ipv6, *whitelist_tree_ipv6;
 
-bool DEBUG = 0;
+bool DEBUG = 1;
 
 // flag about dumping all packets to log
 bool DEBUG_DUMP_ALL_PACKETS = false;
@@ -3094,6 +3094,9 @@ bool exabgp_flow_spec_ban_manage(std::string action, std::string flow_spec_rule_
     }
 
     close(exabgp_pipe);
+    
+    logger << log4cpp::Priority::INFO << "Enviando comando ao EXABGP " << bgp_message
+    
     return true;
 }
 
